@@ -29,7 +29,11 @@ if (ENV.NODE_ENV === "production") {
   });
 }
 
-server.listen(PORT, () => {
-  console.log("Server running on port: " + PORT);
+// server.listen(PORT, () => {
+//   console.log("Server running on port: " + PORT);
+//   connectDB();
+// });
+server.listen(PORT, "0.0.0.0", () => {
+  console.log("Server running on port:", PORT);
   connectDB();
 });
